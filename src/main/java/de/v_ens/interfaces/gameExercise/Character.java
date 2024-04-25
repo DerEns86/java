@@ -2,7 +2,7 @@ package de.v_ens.interfaces.gameExercise;
 
 import java.util.Objects;
 
-public class Character {
+public class Character implements Movable{
 
     private int positionX;
     private int positionY;
@@ -61,5 +61,20 @@ public class Character {
                 ", positionY=" + positionY +
                 ", name='" + name + '\'' +
                 '}';
+    }
+
+    @Override
+    public void moveInX(int distance) {
+        this.setPositionX(this.getPositionX() + distance);
+    }
+
+    @Override
+    public void moveInY(int distance) {
+        this.setPositionY(this.getPositionY() + distance);
+    }
+
+    @Override
+    public void introduce(String name) {
+
     }
 }

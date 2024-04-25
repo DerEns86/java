@@ -2,8 +2,8 @@ package de.v_ens.interfaces.gameExercise;
 
 public interface Movable {
 
-    int moveInX();
-    int moveInY();
-    String introduce();
+    void moveInX(int distance);
+    void moveInY(int distance);
+    void introduce(String name);
 
 }
