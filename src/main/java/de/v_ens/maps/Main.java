@@ -1,4 +1,4 @@
-package de.v_ens.lists;
+package de.v_ens.maps;
 
 /*
 Step 1: Create a Java class "Student" that should have the following properties: First name, Last name, Student ID.
