@@ -1,7 +1,9 @@
 package de.v_ens.maps;
 
-import java.util.ArrayList;
-import java.util.List;
+
+import java.util.HashMap;
+
+import java.util.Map;
 
 /*
 Step 3: Create a class "School" to which students can be added through a method ('addStudent').
@@ -11,28 +13,21 @@ Step 6: Create a method to remove a student from the school.
  */
 public class School {
 
-    List<Student> students = new ArrayList<>();
+    Map<String , Student> students = new HashMap<>();
 
     public void addStudent(Student student) {
-        students.add(student);
+        students.put(student.getStudentId(), student);
     }
 
     public Student findStudentById(String studentId) {
-        for (Student student : students) {
-            if (student.getStudentId().equals(studentId)) {
-                return student;
-            }
-        }
-        return null;
+        return students.get(studentId);
     }
 
     public void removeStudent(String studentId) {
-        students.remove(findStudentById(studentId));
+        students.remove(studentId);
     }
 
     public void printStudents() {
-        for (Student student : students) {
-            System.out.println(student);
-        }
+        students.values().forEach(System.out::println);
     }
 }

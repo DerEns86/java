@@ -8,7 +8,7 @@ Step 2: Create a Java List for elements of type "Student" and add multiple stude
 public class Student {
     private String firstName;
     private String lastName;
-private String studentId;
+    private String studentId;
 
     public Student(String firstName, String lastName, String studentId) {
         this.firstName = firstName;
