@@ -16,4 +16,19 @@ Step 6: Create a method 'void delete(String medicationName)' in the class Pharma
 Step 7: Implement a method to print all Medications in the map, including their name, price, and availability.
  */
 public class Main {
+
+    public static void main(String[] args) {
+
+        Pharmacy pharmacy = new Pharmacy();
+
+        pharmacy.save(new Medication("Paracetamol", 5, true));
+        pharmacy.save(new Medication("Ibuprofen", 10, false));
+        System.out.println("Count" + pharmacy.getCount());
+        pharmacy.printAllMedications();
+        System.out.println(pharmacy.findMedication("Ibuprofen"));
+        System.out.println(pharmacy.findMedication("Ibu"));
+        pharmacy.delete("Paracetamol");
+        System.out.println("Count" + pharmacy.getCount());
+        System.out.println(pharmacy.allMedications);
+    }
 }
