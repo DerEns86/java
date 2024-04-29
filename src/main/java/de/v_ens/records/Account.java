@@ -9,9 +9,9 @@ public class Account {
     private BigDecimal balance;
     private Client customer;
 
-    public Account(String accountNumber, double balance, Client customer) {
+    public Account(String accountNumber, BigDecimal balance, Client customer) {
         this.accountNumber = accountNumber;
-        this.balance = BigDecimal.valueOf(balance);
+        this.balance = balance;
         this.customer = customer;
     }
 
