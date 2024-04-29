@@ -9,17 +9,15 @@ public class Pharmacy {
     Map<String, Medication> allMedications = new HashMap<>();
 
     public int getCount() {
-       return  allMedications.size();
+        return allMedications.size();
     }
 
     public void save(Medication medication) {
-        // allMedications.put(new Medication(medication.getName(), medication.getPrice(), medication.isAvailability()).getName(), medication);
-        medication = new Medication(medication.getName(), medication.getPrice(), medication.isAvailability());
         allMedications.put(medication.getName(), medication);
     }
 
     public String findMedication(String medicationName) {
-        if(allMedications.containsKey(medicationName)){
+        if (allMedications.containsKey(medicationName)) {
             return allMedications.get(medicationName).getName();
         } else {
             return null;
@@ -31,9 +29,10 @@ public class Pharmacy {
 
     }
 
-    public void printAllMedications(){
+    public void printAllMedications() {
         for (Medication medication : allMedications.values()) {
-            System.out.println(medication.getName() + " " + medication.getPrice() + " " + medication.isAvailability());
+//            System.out.println(medication.getName() + " " + medication.getPrice() + " " + medication.isAvailability());
+            System.out.println(medication);
         }
     }
 
